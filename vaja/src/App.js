@@ -1,14 +1,16 @@
 import logo from './source_files/logo.svg';
 import './App.css';
 function Neke() {
+  const [tekst, setText] = useState(false);
   return (
     <>
       <div>
         <p>
           Neki tekst druge funkcije
         </p>
+        <button onClick={(e)=>{setText(!tekst)}}></button>
       </div>
-      <span>Nekaj</span>
+      <span>{tekst? "prvi tekst": "drugi tekst"}</span>
     </>
   )
 }
